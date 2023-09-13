@@ -1,4 +1,4 @@
-# PIC32CXBZ2_WBZ45x_BLE_Proximity_Profile# PIC32CXBZ2_WBZ45x BLE Proximity Profile
+# PIC32CXBZ2_WBZ45x BLE Proximity Profile
 
 <img src="Docs/IoT-Made-Easy-Logo.png" width=100>
 
@@ -177,8 +177,8 @@ Follow the steps provided in the link to [Build and program the application](htt
 
 The Proximity monitor device scans and gets connected to the Proximity reporter device. Once the connection is established the Proximity monitor device writes the alert level value to the reporter device based on the RSSI. There are three alert levels: No Alert(Green LED), Mild Alert(Blue LED) and High Alert(Red LED). In this application the Low Alert Range is set as -30dBm and Low Alert Range is set as -45dBm. The alert range can be changed in "app.c" file in the monitor application. 
 
-![](Docs/FMD1.gif)
+![](Docs/FMD.gif)
 
 The Proximity reporter can also be connected to the Mobile phome via MBD app as shown below. 
 
-![](Docs/FMD2.gif)	
+![](Docs/FMD3.gif)	
