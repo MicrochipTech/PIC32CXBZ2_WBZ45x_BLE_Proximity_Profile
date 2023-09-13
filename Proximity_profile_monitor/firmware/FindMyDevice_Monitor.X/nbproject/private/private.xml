@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/app.c</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/app_timer/app_timer.c</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/config/default/tasks.c</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/app_ble/app_ble_handler.h</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/app.h</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/config/default/ble/profile_ble/ble_pxpm/ble_pxpm.h</file>
+            <file>file:/D:/Task11(FMP)/FindMyPhone_Central/firmware/src/app_ble/app_ble_handler.c</file>
+        </group>
+    </open-files>
+</project-private>
