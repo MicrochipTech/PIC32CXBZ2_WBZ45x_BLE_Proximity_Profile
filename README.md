@@ -30,19 +30,16 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 ## 1. Introduction<a name="step1">
 
-This application demonstrates the multiprotocol functionality of the PIC32CXBZ2 device / WBZ451 module. Here a Zigbee BLE Bridge application is demonstrated using PIC32CXBZ2 / WBZ451 device that functions as both a BLE and a Zigbee CI device simultaneously. In this application, the user can connect a smartphone to a Zigbee network via a BLE connection created by the WBZ451 device. In order to this, the [Zigbee console commands](https://onlinedocs.microchip.com/pr/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-2/index.html?GUID-BA19A3F8-CCEB-44C2-B5BF-C203DD6A8D41) have been mapped to the BLE Transparent UART Service. With the help of console commands, the user can allow new devices to join the Zigbee network as well as monitor and control the Zigbee network.
-
+This application demonstrates on how to create a BLE Proximity reporter application on WBZ451 Curiosity board. This application also illustrates the use of the Services provided by the Proximity profile.
 
 ![](Docs/Setup.PNG)
 
-| Tip | Go through the [overview](https://onlinedocs.microchip.com/pr/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-2/index.html?GUID-668A6CB2-F1FB-438D-9E1E-D67AC3C1C132) for understanding few key Zigbee 3.0 protocol concepts |
-| :- | :- |
 
 ## 2. Bill of materials<a name="step2">
 
 | TOOLS | QUANTITY |
 | :- | :- |
-| [PIC32CX-BZ2 and WBZ451 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/EV96B94A) | 2 |
+| [PIC32CX-BZ2 and WBZ451 Curiosity Development Board](https://www.microchip.com/en-us/development-tool/EV96B94A) | 1 |
 
 ## 3. Software Setup<a name="step4">
 
@@ -60,60 +57,15 @@ This application demonstrates the multiprotocol functionality of the PIC32CXBZ2 
 	  - wolfssl version: v4.7.0
 	  - crypto version: v3.7.6
 	  - wireless_pic32cxbz_wbz: v1.1.0
-	  - wireless_zigbee: v5.0.0
 	  - wireless_ble: v1.0.0
 
 - Any Serial Terminal application like [TERA TERM](https://download.cnet.com/Tera-Term/3000-2094_4-75766675.html) terminal application
 
-- [MPLAB X IPE v6.05](https://microchipdeveloper.com/ipe:installation)
+- [MPLAB X IPE v6.10](https://microchipdeveloper.com/ipe:installation)
 
 - [Microchip Bluetooth Data (MBD app)](https://play.google.com/store/apps/details?id=com.microchip.bluetooth.data&hl=en&gl=US)
 
 ## 4. Harmony MCC Configuration<a name="step5">
-
-### Getting started with Proximity Monitor application in WBZ451 Curiosity board 
-
-| Tip | New users of MPLAB Code Configurator are recommended to go through the [overview](https://onlinedocs.microchip.com/pr/GUID-1F7007B8-9A46-4D03-AEED-650357BA760D-en-US-6/index.html?GUID-B5D058F5-1D0B-4720-8649-ACE5C0EEE2C0) |
-| :- | :- |
-
-**Step 1** - Connect the WBZ451 CURIOSITY BOARD to the device/system using a micro-USB cable.
-
-**Step 2** - Create a [new MCC Harmony project](https://github.com/MicrochipTech/EA71C53A/blob/master/H3/wireless_apps_pic32cxbz2_wbz45/apps/docs/creating_new_mplabx_harmony_project.md#creating-a-new-mcc-harmony-project).
-
-**Step 3** - The "MCC - Harmony Project Graph" below depicts the harmony components utilized in this project.
-
-![](Docs/Project_grph.PNG)
-
-- From Device resources, go to Wireless->Drivers->BLE->Profiles and select Proximity profile. Accept Dependencies or satisfiers, select "Yes". Right click on the "⬦" and add all the services for the profile. The configuration is depicted as follows.
-
-![](Docs/Proximity_profile.PNG)
-
-- Select BLE STACK and configure as depicted below.
-
-![](Docs/BLE1.PNG)
-
-- From Device resources, go to  Library->Harmony->Peripherals->SERCOM and selct SERCOM0. Right click on the "⬦" on UART and select STDIO. The configuration is depicted as follows.
-
-![](Docs/SERCOM.PNG)
-
-- From Device resources, go to  Wireless->System Services and selct APP TIMER SERVICE.
-
-**Step 4** - [Generate](https://onlinedocs.microchip.com/pr/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-1/index.html?GUID-9C28F407-4879-4174-9963-2CF34161398E) the code.
- 
-**Step 5** - In "app_user_edits.c", make sure the below code line is commented 
-
-- "#error User action required - manually edit files as described here".
-
-**Step 6** - Copy the mentioned files from this repository by navigating to the location mentioned below and paste it your project folder. 
-
-| Note | This application repository should be cloned/downloaded to perform the following steps. |
-| :- | :- |
-| Path | firmware/src |
-
-- Copy the "app_ble" folder, "app_timer" folder, "app.c" and "app.h" which can be found by navigating to the following path: "...\firmware\src"
-- Paste the folder under source files in your project folder (...\firmware\src).
-
-**Step 7** - Clean and build the project. To run the project, select "Make and program device" button.
 
 ### Getting started with Proximity Reporter application in WBZ451 Curiosity board 
 
@@ -175,10 +127,30 @@ Follow the steps provided in the link to [Build and program the application](htt
 
 ## 6. Run the demo<a name="step7">
 
-The Proximity monitor device scans and gets connected to the Proximity reporter device. Once the connection is established the Proximity monitor device writes the alert level value to the reporter device based on the RSSI. There are three alert levels: No Alert(Green LED), Mild Alert(Blue LED) and High Alert(Red LED). In this application the Low Alert Range is set as -30dBm and Low Alert Range is set as -45dBm. The alert range can be changed in "app.c" file in the monitor application. 
+The Proximity reporter device can be connected to the Mobile phome via MBD app. 
+- The proximity profile has three services:
+	- Link Loss Service, 
+	- Immediate Alert Service and 
+	- Transmit Power Service. 
+	
+#### Link Loss Service
 
-![](Docs/FMD.gif)
+- Once the connection is established the user can set the Alert level on the Link Loss service in MBD app. This service uses the Alert Level characteristic to cause an alert in the device when the link is lost. 
+- There are three alert levels: No Alert, Mild Alert and High Alert.
+- If the selected link loss alert level is “High Alert”, the device will Toggle the RGB LED.
+- If the selected link loss alert level is “Mild Alert”, the device will Toggle the USER LED.
+- If the selected link loss alert level is “No Alert”, No alerting will be done on the device.
 
-The Proximity reporter can also be connected to the Mobile phome via MBD app as shown below. 
+#### Immediate Alert Service 
 
-![](Docs/FMD3.gif)	
+- When this service is selected in the MBD app, the Mobile phone writes the alert level value to the reporter device based on the RSSI. 
+- There are three alert levels: No Alert(Green LED), Mild Alert(Blue LED) and High Alert(Red LED) indicated by the LED. 
+- The Low Alert Range is set as -45dBm and Low Alert Range is set as -60dBm. The alert range can be changed MBD app. 
+
+#### Transmit Power Service
+
+- This service gives us the connection TX power.
+
+
+![](Docs/FMD3.gif)
+
