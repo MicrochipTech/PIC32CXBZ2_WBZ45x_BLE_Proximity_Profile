@@ -141,16 +141,20 @@ The Proximity reporter device can be connected to the Mobile phome via MBD app.
 - If the selected link loss alert level is “Mild Alert”, the device will Toggle the USER LED.
 - If the selected link loss alert level is “No Alert”, No alerting will be done on the device.
 
+![](Docs/LLS.PNG)
+
 #### Immediate Alert Service 
 
 - When this service is selected in the MBD app, the Mobile phone writes the alert level value to the reporter device based on the RSSI. 
 - There are three alert levels: No Alert(Green LED), Mild Alert(Blue LED) and High Alert(Red LED) indicated by the LED. 
 - The Low Alert Range is set as -45dBm and Low Alert Range is set as -60dBm. The alert range can be changed MBD app. 
 
+![](Docs/IAS.PNG)
+
 #### Transmit Power Service
 
 - This service gives us the connection TX power.
 
+![](Docs/TPS.PNG)
 
-![](Docs/FMD3.gif)
 
