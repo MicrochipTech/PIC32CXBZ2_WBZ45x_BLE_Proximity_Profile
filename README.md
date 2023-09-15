@@ -108,7 +108,7 @@ This application demonstrates on how to create a BLE Proximity reporter applicat
 | :- | :- |
 | Path | firmware/src |
 
-- Copy the "app_ble" folder, "app.c" and "app.h" which can be found by navigating to the following path: "...\firmware\src"
+- Copy the "app_ble" folder, "app_timer" folder, "app.c" and "app.h" which can be found by navigating to the following path: "...\firmware\src"
 - Paste the folder under source files in your project folder (...\firmware\src).
 
 **Step 7** - Clean and build the project. To run the project, select "Make and program device" button.
@@ -117,7 +117,7 @@ This application demonstrates on how to create a BLE Proximity reporter applicat
 
 ### Program the precompiled hex file using MPLAB X IPE
 
-- The application hex file can be found in the hex folder
+- The application hex file can be found in the hex folder.
 
 - Follow the steps provided in the link to [program the precompiled hex file](https://microchipdeveloper.com/ipe:programming-device) using MPLABX IPE to program the pre-compiled hex image. 
 
