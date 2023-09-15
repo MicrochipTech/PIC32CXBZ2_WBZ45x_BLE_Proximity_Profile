@@ -127,7 +127,7 @@ Follow the steps provided in the link to [Build and program the application](htt
 
 ## 6. Run the demo<a name="step7">
 
-The Proximity reporter device can be connected to the Mobile phome via MBD app. 
+The Proximity reporter device can be connected to the Mobile phone via MBD app. 
 - The proximity profile has three services:
 	- Link Loss Service, 
 	- Immediate Alert Service and 
