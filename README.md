@@ -133,7 +133,7 @@ The Proximity reporter device can be connected to the Mobile phone via MBD app.
 	- Immediate Alert Service and 
 	- Transmit Power Service. 
 	
-#### Link Loss Service
+### Link Loss Service
 
 - Once the connection is established the user can set the Alert level on the Link Loss service in MBD app. This service uses the Alert Level characteristic to cause an alert in the device when the link is lost. 
 - There are three alert levels: No Alert, Mild Alert and High Alert.
@@ -141,20 +141,27 @@ The Proximity reporter device can be connected to the Mobile phone via MBD app.
 - If the selected link loss alert level is “Mild Alert”, the device will Toggle the USER LED.
 - If the selected link loss alert level is “No Alert”, No alerting will be done on the device.
 
+![](Docs/lls_service.gif)
+
 ![](Docs/LLS.PNG)
 
-#### Immediate Alert Service 
+### Immediate Alert Service 
 
 - When this service is selected in the MBD app, the Mobile phone writes the alert level value to the reporter device based on the RSSI. 
 - There are three alert levels: No Alert(Green LED), Mild Alert(Blue LED) and High Alert(Red LED) indicated by the LED. 
 - The Low Alert Range is set as -45dBm and Low Alert Range is set as -60dBm. The alert range can be changed MBD app. 
 
+![](Docs/ias_service.gif)
+
 ![](Docs/IAS.PNG)
 
-#### Transmit Power Service
+### Transmit Power Service
 
 - This service gives us the connection TX power.
 
 ![](Docs/TPS.PNG)
 
+#### Note
+
+LE Power Control (LEPC), is one of the features introduced in Bluetooth Core Specification version 5.2 which allows devices to manage power by dynamically optimizing transmit power levels. The RSSI measurement of the device might vary based on the LE power control. For more details please go through this [link](https://www.bluetooth.com/blog/6-important-things-to-know-about-le-power-control/).
 
