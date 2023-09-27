@@ -111,6 +111,10 @@ This application demonstrates on how to create a BLE Proximity reporter applicat
 - Copy the "app_ble" folder, "app_timer" folder, "app.c" and "app.h" which can be found by navigating to the following path: "...\firmware\src"
 - Paste the folder under source files in your project folder (...\firmware\src).
 
+- In the "app_pxpr_handler", the event for Alert Level in Link Loss Service is written. In the "app_ble_handler.c" file whenever a BLE disconnection happens due to connection timeout an app task is posted to alert the user based on the link loss alert level.
+
+- In the "app_pxpr_handler", the event for Alert Level in Immediate Alert Service is written. And the RGB LED glows based on the alert level.
+
 **Step 7** - Clean and build the project. To run the project, select "Make and program device" button.
 
 ## 5. Board Programming<a name="step6">
