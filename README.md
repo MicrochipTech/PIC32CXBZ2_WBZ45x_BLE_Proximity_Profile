@@ -163,7 +163,7 @@ This application demonstrates on how to create a BLE Proximity monitor and Proxi
 - Copy the "app_ble" folder, "app_timer" folder, "app.c" and "app.h" which can be found by navigating to the following path: "...\firmware\src"
 - Paste the folder under source files in your project folder (...\firmware\src).
 
-- In "app.c", the once the BLE connection is established the pathloss parameters are set. Based on the Pathloss threshold, Hysteresis and the Time spent, the pathloss value between to BLE devices is calculated. Based on this pathloss value the Immediate Alert Service Alert level is written to the reporter. For more details please go through this [link](https://onlinedocs.microchip.com/oxy/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-3/GUID-02FE54CD-CC0E-45F0-8525-0043B54B828B.html) for understanding pathloss feature in BLE.
+- In "app.c", the once the BLE connection is established the pathloss parameters are set. Based on the Pathloss threshold, Hysteresis and the Time spent, the pathloss value between the BLE devices is calculated. Based on this pathloss value the Immediate Alert Service Alert level is written to the reporter. For more details please go through this [link](https://onlinedocs.microchip.com/oxy/GUID-A5330D3A-9F51-4A26-B71D-8503A493DF9C-en-US-3/GUID-02FE54CD-CC0E-45F0-8525-0043B54B828B.html) for understanding pathloss feature in BLE.
 
 **Step 7** - Clean and build the project. To run the project, select "Make and program device" button.
 
