@@ -32,7 +32,7 @@ Checkout the <a href="https://microchipsupport.force.com/s/" target="_blank">Tec
 
 This application demonstrates on how to create a BLE Proximity monitor and Proximity reporter application on WBZ451 Curiosity board. This application also illustrates the use of the Services provided by the Proximity profile.
 
-![](Docs/Setup.PNG)
+![](Docs/Block_diag.PNG)
 
 
 ## 2. Bill of materials<a name="step2">
