@@ -88,7 +88,7 @@ This application demonstrates on how to create a BLE Proximity monitor and Proxi
 
 ![](Docs/BLE2.PNG)
 
-- From Device resources, go to  Library->Harmony->Peripherals->SERCOM and selct SERCOM0. Right click on the "⬦" on UART and select STDIO. The configuration is depicted as follows.
+- From Device resources, go to  Library->Harmony->Peripherals->SERCOM and select SERCOM0. Right click on the "⬦" on UART and select STDIO. The configuration is depicted as follows.
 
 ![](Docs/SERCOM.PNG)
 
